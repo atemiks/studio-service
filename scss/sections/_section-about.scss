@@ -1,0 +1,154 @@
+.section-about {
+    overflow: hidden;
+    padding: 25px 0;
+    color: $c-light;
+    @include media-breakpoint-up(sm) {
+        padding: 40px 0 35px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 85px 0 65px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 85px 0 45px;
+    }
+    @include media-breakpoint-up(xxl) {
+        padding: 85px 0;
+    }
+
+    .section-about-media-container {
+        margin-bottom: 55px;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 45px;
+        }
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    .section-about-typography-container {
+        @include media-breakpoint-up(xxl) {
+            padding-top: 40px;
+        }
+    }
+
+
+    .section-header {
+        margin-bottom: 15px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 10px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 20px;
+        }
+        @include media-breakpoint-up(xxl) {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            position: relative;
+            z-index: 1;
+
+
+            &::before {
+                @include media-breakpoint-up(lg) {
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    width: 104px;
+                    height: 95px;
+                    transform: translate(-50%, -35%);
+                    background: url('../../images/logo-purple.png') no-repeat 0 0;
+                    background-size: contain;
+                    content: '';
+                }
+                @include media-breakpoint-up(xxl) {
+                    width: 138px;
+                    height: 127px;
+                }
+            }
+        }
+    }
+}
+
+.about-description {
+    margin: 0 0 15px;
+    @include media-breakpoint-up(sm) {
+        margin: 0 0 25px;
+    }
+    @include media-breakpoint-up(md) {
+        margin: 0 0 20px;
+    }
+    @include media-breakpoint-up(xl) {
+        margin: 0 0 25px;
+    }
+}
+
+.about-presentation-block {
+    .card-video {
+        &::before {
+            top: 5%;
+            left: 5%;
+            right: 5%;
+            bottom: 5%;
+            border-radius: 20%;
+            background: rgb(188,205,255);
+            background: -moz-linear-gradient(145deg, rgba(188,205,255,1) 0%, rgba(182,249,209,1) 50%, rgba(230,162,235,1) 100%);
+            background: -webkit-linear-gradient(145deg, rgba(188,205,255,1) 0%, rgba(182,249,209,1) 50%, rgba(230,162,235,1) 100%);
+            background: linear-gradient(145deg, rgba(188,205,255,1) 0%, rgba(182,249,209,1) 50%, rgba(230,162,235,1) 100%);
+            filter: blur(15px);
+            @include media-breakpoint-up(lg) {
+                filter: blur(30px);
+            }
+            @include media-breakpoint-up(xxl) {
+                filter: blur(40px);
+            }
+        }
+
+        .card-video-figure {
+            &::before,
+            &::after {
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background: rgba($c-white, .05);
+                content: '';
+            }
+
+            &::before {
+                top: 17px;
+                left: 17px;
+                @include media-breakpoint-up(sm) {
+                    top: 20px;
+                    left: 20px;
+                }
+                @include media-breakpoint-up(xl) {
+                    top: 26px;
+                    left: 26px;
+                }
+                @include media-breakpoint-up(xxl) {
+                    top: 40px;
+                    left: 40px;
+                }
+            }
+
+            &::after {
+                top: 8px;
+                left: 8px;
+                @include media-breakpoint-up(sm) {
+                    top: 10px;
+                    left: 10px;
+                }
+                @include media-breakpoint-up(xl) {
+                    top: 12px;
+                    left: 12px;
+                }
+                @include media-breakpoint-up(xxl) {
+                    top: 20px;
+                    left: 20px;
+                }
+            }
+        }
+    }
+}
